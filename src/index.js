@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { StaticKitProvider } from '@statickit/react';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StaticKitProvider site="2cd4c73ad515">
     <App />
-  </React.StrictMode>,
+  </StaticKitProvider>,
   document.getElementById('root')
 );
 

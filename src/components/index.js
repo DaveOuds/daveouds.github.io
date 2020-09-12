@@ -1,0 +1,7 @@
+export * from './about'
+export * from './contact'
+export * from './header'
+export * from './hero'
+export * from './layout'
+export * from './services'
+export * from './workExperiences'

@@ -1,0 +1,32 @@
+body, p {
+  margin: 0;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 10px auto;
+  border-bottom: 3px solid #0580FF; 
+  width: fit-content;
+}
+p {
+  font-size: 16px;
+}
+
+@media all and (min-width: 768px) { 
+  h1 {
+    font-size: 54px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 36px;
+    margin: 0 auto 25px;
+  }
+  p{ 
+    font-size: 24px;
+  }
+}
