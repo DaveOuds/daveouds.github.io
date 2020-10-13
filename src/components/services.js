@@ -1,42 +1,51 @@
 import React from "react";
-import styled from "styled-components"
-
 import { color } from "../theme"
-import Background from './../images/office.jpg'
+import { ContentBlock } from "./"
+import styled from 'styled-components';
 
-const StyledBlock = styled.div`
-  background: ${color.baseColor2} url(${Background}) no-repeat bottom left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: ${color.baseColor2};
+const Cards = styled.div`
+    @media all and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 `
-const TextBlock = styled.div`
-  background-color: ${color.accentColor};
-  color: ${color.baseColor2};
-  height: fit-content;
-  padding: 25px 10%;
-  margin: 50px 0 50px 20%;
-
-  @media all and (min-width: 768px) { margin-left: 30% }
+const Card = styled.div`
+    border-radius: 5px;
+    box-shadow: 3px 3px #081430;
+    background: white;
+    width: 30%;
+    height: 300px;
+    color: black;
 `
-const Title = styled.h2`
-  width: fit-content;
-`
-
 export const Services = () => (
-  <StyledBlock>
-    <TextBlock>
-      <Title>Services</Title>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        <br/>
-        <br/>
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        <br/>
-        <br/>
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </TextBlock>
-  </StyledBlock>
+  <ContentBlock background={color.accentColor} color={color.baseColor2}>
+    <h2>Services</h2>
+    <Cards>
+        <Card>
+            <h3>Products</h3>
+            Websites <br />
+            Webshops<br />
+            Web applications<br />
+            API's<br />
+            Mobile Applications<br />
+        </Card>
+        <Card>
+            <h3>Technologies</h3>
+            Drupal<br />
+            React<br />
+            Golang<br />
+            HTML5 & CSS3<br />
+            SCSS<br />
+            GIT<br />
+            Docker<br />
+
+        </Card>
+        <Card>
+            <h3>Data Science</h3>
+        </Card>
+    </Cards>
+    
+
+  </ContentBlock>
 )

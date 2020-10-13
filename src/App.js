@@ -11,9 +11,9 @@ class App extends React.Component {
         
         <Hero />
 
-        <About />
-
         <Services />
+
+        <About />
 
         <WorkExperience />
 

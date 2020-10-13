@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components"
-
+import { ContentBlock } from "./"
+import {FlipCard} from "./flipCard"
 import Trimm from './../images/trimm.png'
 import Benchmark from './../images/benchmark.png'
 import Bixal from './../images/bixal.png'
@@ -8,9 +9,6 @@ import Previder from './../images/previder.png'
 
 import { color } from "../theme"
 
-const StyledBlock = styled.div`
-  margin-bottom: 50px;
-`
 const TitleBlock = styled.div`
   padding: 25px 10% 0 0;
   
@@ -24,49 +22,45 @@ const Cards = styled.div`
 
   @media all and (min-width: 768px) { 
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 10%;
   }
 `
-const Card = styled.div`
-  border: 1px solid;
-  box-shadow: 1px 1px darkgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  margin: 25px 15px;
-  
-  @media all and (min-width: 768px) { width: 40%}
-`
+const bixal = {
+  company: "Bixal",
+  jobTitle: "Intern/Software Consultant",
+  stack: "Drupal, ReactJS, Golang, Docker",
+}
 
-const Logo = styled.img`
-  margin: auto auto;
-  height: 150px;
-  width: 80%;
-`
+const previder = {
+  company: "Previder",
+  jobTitle: "Parttime Developer",
+  stack: "Ruby,",
+}
 
-
+const benchmark = {
+  company: "Benchmark Electronics",
+  jobTitle: "Graduation Student",
+  stack: "Python, TF Agents, Docker, WebSockets, NodeJS",
+}
+const trimm = {
+  company: "TRIMM",
+  jobTitle: "Drupal Developer",
+  stack: "NodeJS, React Native, ReactJS, Drupal, Kubernetes",
+}
 
 export const WorkExperience = () => (
-  <StyledBlock>
+  <ContentBlock>
     <TitleBlock>
       <Title>Work Experience</Title>
     </TitleBlock>
 
     <Cards>
-      <Card>
-        <Logo src={Trimm} />
-      </Card>
-      <Card>
-        <Logo src={Benchmark} />
-      </Card>
-      <Card>
-        <Logo src={Bixal} />
-      </Card>
-      <Card>
-        <Logo src={Previder} />
-      </Card>
+      <FlipCard image={Trimm} back={trimm} />
+      <FlipCard image={Benchmark} back={benchmark} />
+      <FlipCard image={Bixal} back={bixal} />
+      <FlipCard image={Previder} back={previder} />
     </Cards>
-  </StyledBlock>
+  </ContentBlock>
 )

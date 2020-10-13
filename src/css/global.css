@@ -9,12 +9,11 @@ h1 {
 
 h2 {
   font-size: 36px;
-  margin: 10px auto;
-  border-bottom: 3px solid #0580FF; 
-  width: fit-content;
+  margin: 10px 0;
 }
 p {
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media all and (min-width: 768px) { 
@@ -24,7 +23,6 @@ p {
   }
   h2 {
     font-size: 36px;
-    margin: 0 auto 25px;
   }
   p{ 
     font-size: 24px;

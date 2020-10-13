@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components"
-import { useForm, ValidationError } from '@statickit/react';
+import { useForm } from '@statickit/react';
 import { color } from "../theme"
+import { ContentBlock } from "./"
 
 const Title = styled.h2`
   border-bottom: 5px solid ${color.accentColor}; 
   width: fit-content;
 `
-const StyledBlock = styled.div`
-  background-color: ${color.accentColor};
-  padding: 25px 15px 50px;
-  color: ${color.baseColor2}
-`
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -39,7 +36,7 @@ export const Contact = () => {
   }
 
   return (
-  <StyledBlock>
+    <ContentBlock background={color.accentColor} color={color.baseColor2}>
     <Title>Contact</Title>
     <Form onSubmit={handleSubmit}>
       <Label>
@@ -71,5 +68,5 @@ export const Contact = () => {
       
       <input type="submit" value="Submit" style={{width: "40%"}}/>
     </Form>
-  </StyledBlock>
+  </ContentBlock>
 )}
