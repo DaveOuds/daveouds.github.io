@@ -24,7 +24,6 @@ const Cards = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 10%;
   }
 `
 const bixal = {

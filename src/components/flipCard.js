@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ReactCardFlip from 'react-card-flip';
+import ReactCardFlip from "react-card-flip";
 
 const Logo = styled.img`
   margin: auto auto;
-  height: 150px;
+  max-height: 200px;
+
   width: 80%;
 `;
 
@@ -15,38 +16,51 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
   height: 200px;
-  margin: 25px 15px;
-`
+`;
 
 const Back = styled.div`
   display: flex;
-  justify-content: center;
+  text-align: left;
   flex-direction: column;
-  align-items: center;
-  height: 200px;
+  height: 100%;
+  width: 100%;
+  margin: 25px 15px;
+`;
+
+const MainDiv = styled.div`
+  width: 45%;
   margin: 25px 15px;
 `
-
+const H3 = styled.h3`
+  margin: 0.6rem 0;
+`
+const H4 = styled.h4`
+  margin: 0.6rem 0;
+`
 export const FlipCard = ({ image, back }) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <ReactCardFlip
-      containerStyle={{width: "50%"}}
-      isFlipped={flipped}
-      flipDirection="horizontal"
+    <MainDiv
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
     >
-      <Card onMouseEnter={() => setFlipped(true)}>
-        <Logo className="front" src={image} />
-      </Card>
+      <ReactCardFlip
+        containerStyle={{ position: "relative" }}
+        isFlipped={flipped}
+      >
+        <Card>
+          <Logo className="front" src={image} />
+        </Card>
 
-      <Card onMouseLeave={() => setFlipped(false)}>
-        <Back>
-          <h4>{back.company}</h4>
-          <h4>{back.jobTitle}</h4>
-          <h4>{back.stack}</h4>
-        </Back>
-      </Card>
-    </ReactCardFlip>
+        <Card>
+          <Back>
+            <H3>{back.company}</H3>
+            <H4>{back.jobTitle}</H4>
+            <H4>{back.stack}</H4>
+          </Back>
+        </Card>
+      </ReactCardFlip>
+    </MainDiv>
   );
 };

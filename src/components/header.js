@@ -35,7 +35,7 @@ const MenuLink = styled.a`
 `
 export const Header = () => (
   <TitleBar>
-    <h2>DaveOuds.dev</h2>
+    <h2 style={{margin: 0}}>DaveOuds.dev</h2>
 
     <MainMenu>
       <MenuLink href="">About</MenuLink>

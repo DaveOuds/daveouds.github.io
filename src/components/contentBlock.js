@@ -9,12 +9,10 @@ export const ContentBlock = (props) => {
         color: ${props.color};
 
         @media all and (min-width: 768px) {
-            padding: 150px 160px;
+            padding: 120px 160px;
         }
 
     `
-    console.log(props)
-
     return(
         <StyledBlock>
             {props.children}

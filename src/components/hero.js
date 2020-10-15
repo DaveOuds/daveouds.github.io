@@ -3,11 +3,10 @@ import Background from './../images/headshot.png'
 import styled from 'styled-components';
 import { color } from "../theme"
 
-
 const StyledBlock = styled.div`
   background: url(${Background}) no-repeat bottom right;
-  background-position-x: 80%;
-  background-size: 300%;
+  background-position-x: 83%;
+  background-size: 280%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +14,7 @@ const StyledBlock = styled.div`
   height: 100vh;
 
   @media all and (min-width: 768px) { 
+    background-size: 300%;
     background-position-x: 120%;
     background-size: 70%;
   }
@@ -23,34 +23,58 @@ const TextBlock = styled.div`
   position: relative;
   bottom: 10%;
   text-align: center;
+  width: 250px;
   
-  @media all and (min-width: 768px) { text-align: none }
+  @media all and (min-width: 768px) { 
+    bottom: 4%;
+    text-align: left;
+    left: -250px;
+    width: fit-content;
+  }
 `
 const Name = styled.h1`
-  width: 150px;
-  margin: 0 auto;
+  margin: 10px auto;
   color: ${color.baseColor1};
-
-  @media all and (min-width: 768px) { width: 100% }
-`
-const SubTitle = styled.p`
-  width: 250px;
-  @media all and (min-width: 768px) { width: 100% }
-
 `
 const ColoredText = styled.span`
   color: ${color.accentColor};
+`
+
+const Divider = styled.div`
+  width: 2px;
+  height: inherit;
+  background-color: ${color.accentColor};
+`
+const Title = styled.p`
+  display: none;
+  @media all and (min-width: 768px) { 
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+const SubTitle = styled.p`
+  margin: 10px auto;
+  text-align: center;
 `
 export const Hero = () => (
   <StyledBlock>
       <TextBlock>
 
         <Name>Davey Oudshoorn</Name>
-
+        <Title>
+          <Divider />
+          Full Stack developer
+          <Divider />
+          Data Science enthusiast
+          <Divider />
+          DevOps fanatic
+          <Divider />
+        </Title>
         <SubTitle>
-          For all your <ColoredText>websites</ColoredText>, <ColoredText>webshops</ColoredText> and <ColoredText>web-applications</ColoredText>.
+          Lets create something <ColoredText>together</ColoredText>
         </SubTitle>
-        
       </TextBlock>
   </StyledBlock>
 )

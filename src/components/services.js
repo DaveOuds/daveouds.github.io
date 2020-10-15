@@ -4,19 +4,19 @@ import { ContentBlock } from "./"
 import styled from 'styled-components';
 
 const Cards = styled.div`
-    @media all and (min-width: 768px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `
 const Card = styled.div`
-    border-radius: 5px;
-    box-shadow: 3px 3px #081430;
-    background: white;
-    width: 30%;
-    height: 300px;
-    color: black;
+  border-radius: 5px;
+  box-shadow: 3px 3px #081430;
+  background: white;
+  width: 30%;
+  height: 300px;
+  color: black;
 `
 export const Services = () => (
   <ContentBlock background={color.accentColor} color={color.baseColor2}>
