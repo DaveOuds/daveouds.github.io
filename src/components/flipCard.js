@@ -28,8 +28,11 @@ const Back = styled.div`
 `;
 
 const MainDiv = styled.div`
-  width: 45%;
-  margin: 25px 15px;
+  margin: 25px 0;
+  @media all and (min-width: 768px) { 
+    width: 45%;
+    margin: 25px 15px;
+  }
 `
 const H3 = styled.h3`
   margin: 0.6rem 0;

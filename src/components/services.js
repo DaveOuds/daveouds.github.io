@@ -12,37 +12,45 @@ const Cards = styled.div`
 `
 const Card = styled.div`
   border-radius: 5px;
-  box-shadow: 3px 3px #081430;
+  box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.75);
   background: white;
-  width: 30%;
-  height: 300px;
   color: black;
+  @media all and (min-width: 768px) {
+    width: 30%;
+    height: 300px;
+  }
 `
 export const Services = () => (
   <ContentBlock background={color.accentColor} color={color.baseColor2}>
-    <h2>Services</h2>
+    <h2>Skills</h2>
     <Cards>
         <Card>
-            <h3>Products</h3>
-            Websites <br />
-            Webshops<br />
-            Web applications<br />
-            API's<br />
-            Mobile Applications<br />
-        </Card>
-        <Card>
-            <h3>Technologies</h3>
-            Drupal<br />
-            React<br />
-            Golang<br />
+            <h3>Frontend</h3>
+            React(JS/ Native)<br />
             HTML5 & CSS3<br />
             SCSS<br />
-            GIT<br />
-            Docker<br />
+            Responsive Design<br />
+        </Card>
+        <Card>
+            <h3>Backend</h3>
+            PHP<br />
+            NodeJS<br />
+            Python<br />
+            Django<br />
+            Java<br />
+            Golang<br />
 
         </Card>
         <Card>
-            <h3>Data Science</h3>
+            <h3>Other</h3>
+            TensorFlow<br />
+            Drupal<br />
+            GIT<br />
+            Docker<br />
+            WebSockets<br />
+            SQL<br />
+            Apache Cassandra<br />
+            Apache Kafka<br />
         </Card>
     </Cards>
     

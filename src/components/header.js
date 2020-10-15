@@ -5,7 +5,7 @@ import {color} from "../theme"
 const TitleBar = styled.div`
   align-items: center;
   background-color: ${color.baseColor1};
-  box-shadow: -10px 8px 6px -6px black;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75);
   color: white;
   padding: 0 20px;
   position: fixed;
@@ -24,7 +24,6 @@ const MainMenu = styled.ul`
   list-style: none;
 
   @media all and (min-width: 768px) { display: flex }
-
 `
 
 const MenuLink = styled.a`
@@ -33,6 +32,7 @@ const MenuLink = styled.a`
   font-size: 24px;
   font-weight: bold;
 `
+
 export const Header = () => (
   <TitleBar>
     <h2 style={{margin: 0}}>DaveOuds.dev</h2>
