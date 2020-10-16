@@ -25,8 +25,8 @@ const Title = styled.h2`
   width: fit-content;
 `
 
-export const About = () => (
-  <StyledBlock>
+export const About = (ref) => (
+  <StyledBlock innerRef={ref}>
     <TextBlock>
       <Title>About me</Title>
       <p>

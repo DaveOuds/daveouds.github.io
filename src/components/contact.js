@@ -1,32 +1,31 @@
 import React from "react";
-import styled from "styled-components"
-import { useForm } from '@statickit/react';
-import { color } from "../theme"
-import { ContentBlock } from "./"
-
-const Title = styled.h2`
-  border-bottom: 5px solid ${color.accentColor}; 
-  width: fit-content;
-`
+import styled from "styled-components";
+import { useForm } from "@statickit/react";
+import { color } from "../theme";
+import { ContentBlock } from "./";
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  width 50%;
 
   @media all and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-`
+`;
 const Label = styled.label`
   margin-bottom: 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   width: 100%;
-`
+  text-align: left;
+  input { width: 80% }
+`;
 
 export const Contact = () => {
   const [state, handleSubmit] = useForm("contactForm");
@@ -36,37 +35,31 @@ export const Contact = () => {
   }
 
   return (
-    <ContentBlock background={color.accentColor} color={color.baseColor2}>
-    <Title>Contact</Title>
-    <Form onSubmit={handleSubmit}>
-      <Label>
-        Name
-        <input type="text" id="name" name="name"/>
-      </Label>
+    <ContentBlock background={color.accentColor} color={color.baseColor2} title="Contact">
       
-      <Label>
-        Email
-        <input type="text" id="email" name="email"/>
-      </Label>
+      <Form onSubmit={handleSubmit}>
+        <Label>
+          Name
+          <input type="text" id="name" name="name" />
+        </Label>
 
-      <Label>
-        What is your reason for reaching out?
-        <select id="reason" name="reason">
-          <option value="reason1">Reason1</option>
-          <option value="reason2">Reason2</option>
-          <option value="reason3">Reason3</option>
-          <option value="reason3">Reason4</option>
-        </select>
-      </Label>
+        <Label>
+          Email
+          <input type="text" id="email" name="email" />
+        </Label>
 
-      <Label>
-        What can I help you with?
-        <textarea name="message" rows="10" cols="30">
+        <Label>
+          Subject
+          <input type="text" id="subject" name="subject" />
+        </Label>
+
+        <Label style={{flexDirection: "column"}}>
           What can I help you with?
-        </textarea>
-      </Label>
-      
-      <input type="submit" value="Submit" style={{width: "40%"}}/>
-    </Form>
-  </ContentBlock>
-)}
+          <textarea name="message" rows="10" cols="30" />
+        </Label>
+
+        <input type="submit" value="Submit" style={{ width: "40%" }} />
+      </Form>
+    </ContentBlock>
+  );
+};

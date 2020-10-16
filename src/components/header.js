@@ -33,16 +33,16 @@ const MenuLink = styled.a`
   font-weight: bold;
 `
 
-export const Header = () => (
+export const Header = ({scrollToRef}) => (
   <TitleBar>
     <h2 style={{margin: 0}}>DaveOuds.dev</h2>
 
     <MainMenu>
-      <MenuLink href="">About</MenuLink>
-      <MenuLink href="">Services</MenuLink>
-      <MenuLink href="">Work</MenuLink>
-      <MenuLink href="">Demos</MenuLink>
-      <MenuLink href="">Contact</MenuLink>
+      <MenuLink onClick={() => scrollToRef("services")}>Skills</MenuLink>
+      <MenuLink onClick={() => scrollToRef("about")}>About</MenuLink>
+      <MenuLink onClick={() => scrollToRef("work")}>Work</MenuLink>
+      {/* <MenuLink>Demos</MenuLink> */}
+      <MenuLink onClick={() => scrollToRef("contact")}>Contact</MenuLink>
     </MainMenu>
   </TitleBar>
 )

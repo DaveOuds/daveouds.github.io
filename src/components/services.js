@@ -21,8 +21,7 @@ const Card = styled.div`
   }
 `
 export const Services = () => (
-  <ContentBlock background={color.accentColor} color={color.baseColor2}>
-    <h2>Skills</h2>
+  <ContentBlock background={color.accentColor} color={color.baseColor2} title="Skills">
     <Cards>
         <Card>
             <h3>Frontend</h3>

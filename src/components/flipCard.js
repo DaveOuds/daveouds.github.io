@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ReactCardFlip from "react-card-flip";
+import { color } from "../theme"
 
 const Logo = styled.img`
   margin: auto auto;
   max-height: 200px;
-
   width: 80%;
 `;
 
@@ -35,7 +35,10 @@ const MainDiv = styled.div`
   }
 `
 const H3 = styled.h3`
+  border-bottom: 2px solid blue;
+  width: 70%;
   margin: 0.6rem 0;
+  border-bottom: 2px solid ${color.accentColor}
 `
 const H4 = styled.h4`
   margin: 0.6rem 0;
