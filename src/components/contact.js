@@ -27,6 +27,17 @@ const Label = styled.label`
   input { width: 80% }
 `;
 
+const Submit = styled.input`
+  width: 150px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: ${color.accentColor};
+  color: ${color.baseColor2};
+  height: 50px;
+  border-radius:25px;
+  border: none;
+`;
+
 export const Contact = () => {
   const [state, handleSubmit] = useForm("contactForm");
 
@@ -35,7 +46,7 @@ export const Contact = () => {
   }
 
   return (
-    <ContentBlock background={color.accentColor} color={color.baseColor2} title="Contact">
+    <ContentBlock background={color.baseColor1} color={color.baseColor2} title="Contact">
       
       <Form onSubmit={handleSubmit}>
         <Label>
@@ -58,7 +69,7 @@ export const Contact = () => {
           <textarea name="message" rows="10" cols="30" />
         </Label>
 
-        <input type="submit" value="Submit" style={{ width: "40%" }} />
+        <Submit type="submit" />
       </Form>
     </ContentBlock>
   );

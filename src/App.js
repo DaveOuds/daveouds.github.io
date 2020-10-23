@@ -3,7 +3,7 @@ import {
   Header,
   Hero,
   About,
-  Services,
+  Skills,
   Contact,
   WorkExperience,
 } from "./components";
@@ -29,7 +29,7 @@ const App = () => {
       <Hero />
 
       <div ref={refs.services}>
-        <Services />
+        <Skills />
       </div>
 
       <div ref={refs.about}>

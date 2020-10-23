@@ -6,7 +6,6 @@ import Trimm from './../images/trimm.png'
 import Benchmark from './../images/benchmark.png'
 import Bixal from './../images/bixal.png'
 import Previder from './../images/previder.png'
-
 import { color } from "../theme"
 
 const TitleBlock = styled.div`
@@ -35,7 +34,7 @@ const bixal = {
 const previder = {
   company: "Previder",
   jobTitle: "Parttime Developer",
-  stack: "Ruby,",
+  stack: "Ruby",
 }
 
 const benchmark = {
@@ -50,11 +49,7 @@ const trimm = {
 }
 
 export const WorkExperience = () => (
-  <ContentBlock>
-    <TitleBlock>
-      <Title>Work Experience</Title>
-    </TitleBlock>
-
+  <ContentBlock title="Work Experience">
     <Cards>
       <FlipCard image={Trimm} back={trimm} />
       <FlipCard image={Benchmark} back={benchmark} />

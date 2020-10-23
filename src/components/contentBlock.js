@@ -12,10 +12,18 @@ export const ContentBlock = (props) => {
       padding: 120px 160px;
     }
   `;
+
+  const WidthBlock = styled.div`
+    max-width: 1280px;
+    margin: 0 auto;
+
+  `
   return (
     <StyledBlock>
+      <WidthBlock>
       <h2>{props.title}</h2>
       {props.children}
+      </WidthBlock>
     </StyledBlock>
     )
 };

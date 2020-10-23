@@ -31,7 +31,6 @@ const MainDiv = styled.div`
   margin: 25px 0;
   @media all and (min-width: 768px) { 
     width: 45%;
-    margin: 25px 15px;
   }
 `
 const H3 = styled.h3`
@@ -40,7 +39,7 @@ const H3 = styled.h3`
   margin: 0.6rem 0;
   border-bottom: 2px solid ${color.accentColor}
 `
-const H4 = styled.h4`
+const Body = styled.p`
   margin: 0.6rem 0;
 `
 export const FlipCard = ({ image, back }) => {
@@ -62,8 +61,8 @@ export const FlipCard = ({ image, back }) => {
         <Card>
           <Back>
             <H3>{back.company}</H3>
-            <H4>{back.jobTitle}</H4>
-            <H4>{back.stack}</H4>
+            <Body style={{fontWeight: "bold"}}>{back.jobTitle}</Body>
+            <Body>{back.stack}</Body>
           </Back>
         </Card>
       </ReactCardFlip>
