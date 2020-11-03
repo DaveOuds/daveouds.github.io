@@ -6,19 +6,8 @@ import Trimm from './../images/trimm.png'
 import Benchmark from './../images/benchmark.png'
 import Bixal from './../images/bixal.png'
 import Previder from './../images/previder.png'
-import { color } from "../theme"
 
-const TitleBlock = styled.div`
-  padding: 25px 10% 0 0;
-  
-  @media all and (min-width: 768px) { margin-right: 15% }
-`
-const Title = styled.h2`
-  border-bottom: 5px solid ${color.accentColor};
-  text-align: right;
-`
 const Cards = styled.div`
-
   @media all and (min-width: 768px) { 
     display: flex;
     justify-content: space-between;

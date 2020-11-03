@@ -24,7 +24,8 @@ const Back = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  margin: 25px 15px;
+  padding: 15px;
+  box-sizing: border-box;
 `;
 
 const MainDiv = styled.div`
@@ -33,12 +34,19 @@ const MainDiv = styled.div`
     width: 45%;
   }
 `
-const H3 = styled.h3`
+const Company = styled.h3`
   border-bottom: 2px solid blue;
   width: 70%;
-  margin: 0.6rem 0;
+  margin: 0;
+  margin-bottom: 18px;
   border-bottom: 2px solid ${color.accentColor}
 `
+
+const JobTitle = styled.p`
+  font-weight: bold;
+  margin-bottom: 18px;
+`
+
 const Body = styled.p`
   margin: 0.6rem 0;
 `
@@ -60,8 +68,8 @@ export const FlipCard = ({ image, back }) => {
 
         <Card>
           <Back>
-            <H3>{back.company}</H3>
-            <Body style={{fontWeight: "bold"}}>{back.jobTitle}</Body>
+            <Company>{back.company}</Company>
+            <JobTitle>{back.jobTitle}</JobTitle>
             <Body>{back.stack}</Body>
           </Back>
         </Card>

@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 export const ContentBlock = (props) => {
   const StyledBlock = styled.div`
-    padding: 150px 16px;
+    padding: 48px 8px;
     text-align: center;
     background: ${props.background};
     color: ${props.color};
 
     @media all and (min-width: 768px) {
-      padding: 120px 160px;
+      padding: 90px 160px;
     }
   `;
 

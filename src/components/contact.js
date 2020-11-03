@@ -8,10 +8,11 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  width 50%;
+  margin: 12px 0;
 
   @media all and (min-width: 768px) {
+    margin: 0 auto;
+    width 50%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -64,7 +65,7 @@ export const Contact = () => {
           <input type="text" id="subject" name="subject" />
         </Label>
 
-        <Label style={{flexDirection: "column"}}>
+        <Label style={{flexDirection: "column", textAlign: "center"}}>
           What can I help you with?
           <textarea name="message" rows="10" cols="30" />
         </Label>

@@ -32,6 +32,8 @@ const Cards = styled.div`
   }
 `;
 const Card = styled.div`
+  display: inline-block;
+  margin: 12px 6px;
   border-radius: 5px;
   box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.75);
   background: white;
