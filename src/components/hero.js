@@ -48,6 +48,7 @@ const Divider = styled.div`
   height: inherit;
   background-color: ${color.accentColor};
 `;
+
 const Title = styled.p`
   display: none;
   @media all and (min-width: 768px) {
@@ -63,16 +64,14 @@ const SubTitle = styled.p`
 `;
 
 const Images = styled.div`
-  margin: 60px auto 0;
   text-align: center;
+  @media all and (min-width: 768px) { margin: 60px auto 0 }
 `;
 
 const ContactIMG = styled.img`
   max-width: 50px;
   margin: 12px;
-  &:hover {
-    cursor: pointer;
-  }
+  &:hover { cursor: pointer }
 `;
 export const Hero = ({scrollToRef}) => (
   <StyledBlock>
