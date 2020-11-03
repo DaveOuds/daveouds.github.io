@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components"
 import {color} from "../theme"
+import logo from './../images/logo.svg'
+
+
+const Logo = styled.img`
+  max-height: 50px;
+`;
 
 const TitleBar = styled.div`
   align-items: center;
@@ -35,7 +41,7 @@ const MenuLink = styled.a`
 
 export const Header = ({scrollToRef}) => (
   <TitleBar>
-    <h2 style={{margin: 0}}>DaveOuds.dev</h2>
+    <Logo src={logo} />
 
     <MainMenu>
       <MenuLink onClick={() => scrollToRef("services")}>Skills</MenuLink>

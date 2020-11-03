@@ -26,7 +26,7 @@ const App = () => {
     <>
       <Header scrollToRef={scrollToRef} />
 
-      <Hero />
+      <Hero scrollToRef={scrollToRef}/>
 
       <div ref={refs.services}>
         <Skills />

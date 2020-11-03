@@ -11,7 +11,7 @@ const Form = styled.form`
   margin: 12px 0;
 
   @media all and (min-width: 768px) {
-    margin: 0 auto;
+    margin: 24px auto;
     width 50%;
     flex-direction: row;
     flex-wrap: wrap;
