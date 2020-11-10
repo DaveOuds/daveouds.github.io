@@ -7,6 +7,7 @@ import { StaticKitProvider } from '@statickit/react';
 
 ReactDOM.render(
   <StaticKitProvider site="2cd4c73ad515">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap" rel="stylesheet"></link>
     <App />
   </StaticKitProvider>,
   document.getElementById('root')

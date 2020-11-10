@@ -37,6 +37,9 @@ const MenuLink = styled.a`
   color: white;
   font-size: 24px;
   font-weight: bold;
+  &:hover {
+    cursor: pointer
+  }
 `
 
 export const Header = ({scrollToRef}) => (
