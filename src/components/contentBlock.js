@@ -21,7 +21,7 @@ export const ContentBlock = (props) => {
   return (
     <StyledBlock>
       <WidthBlock>
-      <h2>{props.title}</h2>
+      <h2 id={props.titleId}>{props.title}</h2>
       {props.children}
       </WidthBlock>
     </StyledBlock>

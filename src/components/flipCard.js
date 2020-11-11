@@ -59,7 +59,7 @@ export const FlipCard = ({ image, back }) => {
       onMouseLeave={() => setFlipped(false)}
     >
       <ReactCardFlip
-        containerStyle={{ position: "relative" }}
+        containerStyle={{ position: "relative", zIndex:"-1" }}
         isFlipped={flipped}
       >
         <Card>

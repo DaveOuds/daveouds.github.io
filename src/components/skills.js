@@ -54,6 +54,7 @@ export const Skills = () => (
     background={color.baseColor1}
     color={color.baseColor2}
     title="Skills"
+    titleId="skills"
   >
     <Cards>
       <Card>

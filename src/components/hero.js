@@ -74,7 +74,7 @@ const ContactIMG = styled.img`
   &:hover { cursor: pointer }
 `;
 export const Hero = ({scrollToRef}) => (
-  <StyledBlock>
+  <StyledBlock id="banner">
     <TextBlock>
       <Name>Davey Oudshoorn</Name>
       <Title>

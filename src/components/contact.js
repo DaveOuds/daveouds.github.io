@@ -25,30 +25,34 @@ const Label = styled.label`
   text-align: center;
   width: 100%;
   text-align: left;
-  input { width: 80% }
+  input {
+    width: 80%;
+  }
 `;
 
 const Submit = styled.input`
   width: 150px;
+  margin-top: 48px;
   font-size: 24px;
   font-weight: bold;
   background-color: ${color.accentColor};
   color: ${color.baseColor2};
   height: 50px;
-  border-radius:25px;
+  border-radius: 25px;
   border: none;
 `;
 
-export const Contact = () => {
+export const Contact = (props) => {
   const [state, handleSubmit] = useForm("contactForm");
 
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
-
   return (
-    <ContentBlock background={color.baseColor1} color={color.baseColor2} title="Contact">
-      
+    <ContentBlock
+      ref={props.ref}
+      background={color.baseColor1}
+      color={color.baseColor2}
+      title="Contact"
+      titleId="contact"
+    >
       <Form onSubmit={handleSubmit}>
         <Label>
           Name
@@ -65,7 +69,7 @@ export const Contact = () => {
           <input type="text" id="subject" name="subject" />
         </Label>
 
-        <Label style={{flexDirection: "column", textAlign: "center"}}>
+        <Label style={{ flexDirection: "column", textAlign: "center" }}>
           What can I help you with?
           <textarea name="message" rows="10" cols="30" />
         </Label>

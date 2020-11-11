@@ -31,7 +31,7 @@ const Title = styled.h2`
 export const About = (ref) => (
   <StyledBlock innerRef={ref}>
     <TextBlock>
-      <Title>About me</Title>
+      <Title id="about">About me</Title>
       <p>
         I'm a 25 year old Full Stack developer from Enschede in the Netherlands.
         <br />

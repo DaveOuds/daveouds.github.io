@@ -1,48 +1,20 @@
-import React, { useRef } from "react";
-import {
-  Header,
-  Hero,
-  About,
-  Skills,
-  Contact,
-  WorkExperience,
-} from "./components";
-
+import React from "react";
+import { BrowserRouter, Switch, Route} from "react-router-dom";
+import { Header } from "./components";
+import {Home, Blog, Demos} from "./pages";
 import "./css/global.css";
 
 const App = () => {
-  const refs = {
-    about: useRef(null),
-    services: useRef(null),
-    work: useRef(null),
-    contact: useRef(null),
-  };
-
-  const scrollToRef = (ref) => {
-    refs[ref].current.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <>
-      <Header scrollToRef={scrollToRef} />
-
-      <Hero scrollToRef={scrollToRef}/>
-
-      <div ref={refs.services}>
-        <Skills />
-      </div>
-
-      <div ref={refs.about}>
-        <About />
-      </div>
-
-      <div ref={refs.work}>
-        <WorkExperience />
-      </div>
-
-      <div ref={refs.contact}>
-        <Contact />
-      </div>
+      <Header />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/demos" component={Demos} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };
