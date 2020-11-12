@@ -26,6 +26,7 @@ const TextBlock = styled.div`
 `;
 const Title = styled.h2`
   width: fit-content;
+  margin-bottom: 25px;
 `;
 
 export const About = (ref) => (

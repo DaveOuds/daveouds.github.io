@@ -22,12 +22,10 @@ export const Home = () => {
 
   useEffect(() => {
     const callback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActive(entry.target.id);
-          return true;
-        }
-      });
+      const entry = entries.find((entry) => entry.isIntersecting === true);
+      if (entry) {
+        setActive(entry.target.id);
+      }
     };
     const observer = new IntersectionObserver(callback, { threshold: 1 });
     observer.observe(document.querySelector("#banner"));

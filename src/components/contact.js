@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { useForm } from "@statickit/react";
+import { ValidationError, useForm } from "@statickit/react";
 import { color } from "../theme";
 import { ContentBlock } from "./";
+import { toast } from "react-toastify";
 
 const Form = styled.form`
   display: flex;
@@ -44,6 +45,26 @@ const Submit = styled.input`
 
 export const Contact = (props) => {
   const [state, handleSubmit] = useForm("contactForm");
+  const [toasted, setToasted] = useState(false);
+  const toastProps = {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    progress: undefined,
+  };
+
+  if (toasted) {
+    if (state.succeeded) {
+      toast.success("Submission succeeded", toastProps);
+    } else {
+      toast.error(
+        "An error occured while sending your email. Please try again later.",
+        toastProps
+      );
+    }
+    setToasted(false);
+  }
 
   return (
     <ContentBlock
@@ -53,7 +74,12 @@ export const Contact = (props) => {
       title="Contact"
       titleId="contact"
     >
-      <Form onSubmit={handleSubmit}>
+      <Form
+        onSubmit={(x) => {
+          setToasted(true);
+          handleSubmit(x);
+        }}
+      >
         <Label>
           Name
           <input type="text" id="name" name="name" />
